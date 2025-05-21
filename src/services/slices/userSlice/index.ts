@@ -10,12 +10,9 @@ import {
 
 import { TUser } from '@utils-types';
 
-import {
-  createAsyncThunk,
-  createSlice,
-  SerializedError
-} from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { clearTokens, storeTokens } from '@tokens';
+import { ErrorResponse } from 'react-router-dom';
 
 export const registerUser = createAsyncThunk(
   'user/register',
@@ -26,6 +23,7 @@ export const registerUser = createAsyncThunk(
       storeTokens(refreshToken, accessToken);
       return user;
     }
+
     return rejectWithValue(response);
   }
 );
@@ -71,6 +69,7 @@ export const logoutUser = createAsyncThunk(
     const response = await logoutApi();
     if (response?.success) {
       clearTokens();
+      return;
     }
     return rejectWithValue(response);
   }
@@ -125,7 +124,7 @@ export const userSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loading = false;
-        state.registerError = action.error.message
+        state.loginError = action.error.message
           ? action.error.message
           : 'error';
       })
@@ -146,7 +145,6 @@ export const userSlice = createSlice({
       })
       .addCase(logoutUser.fulfilled, (state, action) => {
         state.authenticated = false;
-        state.authChecked = false;
         state.data = { name: '', email: '' };
       });
   }

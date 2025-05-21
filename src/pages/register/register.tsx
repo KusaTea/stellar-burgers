@@ -17,8 +17,12 @@ export const Register: FC = () => {
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    await dispatch(registerUser({ name: userName, email, password }));
-    navigate('/', { replace: true });
+    try {
+      await dispatch(
+        registerUser({ name: userName, email, password })
+      ).unwrap();
+      navigate('/', { replace: true });
+    } catch (_) {}
   };
 
   return (

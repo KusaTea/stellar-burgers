@@ -30,6 +30,7 @@ export const Profile: FC = () => {
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
     dispatch(updateUser(formValue));
+    formValue.password = '';
   };
 
   const handleCancel = (e: SyntheticEvent) => {
