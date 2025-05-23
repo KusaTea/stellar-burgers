@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { TConstructorIngredient, TIngredient } from '@utils-types';
+import { v4 as idGenerator } from 'uuid';
 
 type TConstructorState = {
   bun: TIngredient | null;
@@ -21,7 +22,7 @@ export const burgerConstructorSlice = createSlice({
 
     addIngredient: {
       prepare: (payload: TIngredient) => ({
-        payload: { ...payload, id: payload._id }
+        payload: { ...payload, id: idGenerator() }
       }),
       reducer: (state, action: PayloadAction<TConstructorIngredient>) => {
         if (action.payload.type === 'bun') {
