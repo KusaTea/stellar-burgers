@@ -1,0 +1,77 @@
+{
+    "success": true,
+    "name": "TEST_ORDER",
+    "order": {
+        "ingredients": [
+            {
+                "_id": "11",
+                "name": "black bun",
+                "type": "bun",
+                "proteins": 2,
+                "fat": 1,
+                "carbohydrates": 3,
+                "calories": 120,
+                "price": 12,
+                "image": "https://code.s3.yandex.net/react/code/bun-02.png",
+                "image_mobile": "https://code.s3.yandex.net/react/code/bun-02-mobile.png",
+                "image_large": "https://code.s3.yandex.net/react/code/bun-02-large.png",
+                "__v": 0
+            },
+            {
+                "_id": "21",
+                "name": "bbq",
+                "type": "sauce",
+                "proteins": 0,
+                "fat": 3,
+                "carbohydrates": 5,
+                "calories": 117,
+                "price": 5,
+                "image": "https://res.cloudinary.com/kraft-heinz-whats-cooking-ca/image/upload/f_auto/q_auto/c_limit,w_3840/f_auto/q_auto/v1/dxp-images/brands/products/00068100078589-chicken--rib-bbq-sauce/marketing-view-color-front_content-hub-10624057_2fe71e9176a4fe916d830bee03a7fbf4?_a=BAVAfVDW0",
+                "image_large": "https://res.cloudinary.com/kraft-heinz-whats-cooking-ca/image/upload/f_auto/q_auto/c_limit,w_3840/f_auto/q_auto/v1/dxp-images/brands/products/00068100078589-chicken--rib-bbq-sauce/marketing-view-color-front_content-hub-10624057_2fe71e9176a4fe916d830bee03a7fbf4?_a=BAVAfVDW0",
+                "image_mobile": "https://res.cloudinary.com/kraft-heinz-whats-cooking-ca/image/upload/f_auto/q_auto/c_limit,w_3840/f_auto/q_auto/v1/dxp-images/brands/products/00068100078589-chicken--rib-bbq-sauce/marketing-view-color-front_content-hub-10624057_2fe71e9176a4fe916d830bee03a7fbf4?_a=BAVAfVDW0",
+                "__v": 0
+            },
+            {
+                "_id": "31",
+                "name": "beef",
+                "type": "main",
+                "proteins": 20,
+                "fat": 10,
+                "carbohydrates": 5,
+                "calories": 200,
+                "price": 18,
+                "image": "https://voskresnayayarmarka.ru/files/recipes/42.jpg",
+                "image_large": "https://voskresnayayarmarka.ru/files/recipes/42.jpg",
+                "image_mobile": "https://voskresnayayarmarka.ru/files/recipes/42.jpg",
+                "__v": 0
+            },
+            {
+                "_id": "11",
+                "name": "black bun",
+                "type": "bun",
+                "proteins": 2,
+                "fat": 1,
+                "carbohydrates": 3,
+                "calories": 120,
+                "price": 12,
+                "image": "https://code.s3.yandex.net/react/code/bun-02.png",
+                "image_mobile": "https://code.s3.yandex.net/react/code/bun-02-mobile.png",
+                "image_large": "https://code.s3.yandex.net/react/code/bun-02-large.png",
+                "__v": 0
+            }
+        ],
+        "_id": "15647894654984eee189784ed",
+        "owner": {
+            "email": "test@email.ru",
+            "name": "Test",
+            "createdAt": "2024-06-11T10:00:00.000Z",
+            "updatedAt": "2024-06-11T11:00:00.000Z"
+        },
+        "status": "done",
+        "name": "EXAMPLE_NAME",
+        "createdAt": "2024-06-11T10:00:00.000Z",
+        "updatedAt": "2024-06-11T11:00:00.000Z",
+        "number": 3701,
+        "price": 47
+    }
+}

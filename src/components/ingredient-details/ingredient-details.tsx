@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from '@store';
 
 export const IngredientDetails: FC = () => {
-  /** TODO: взять переменную из стора */
   const { id } = useParams();
 
   const ingredientData = useSelector((state) =>

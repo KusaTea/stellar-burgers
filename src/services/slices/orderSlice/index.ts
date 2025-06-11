@@ -101,3 +101,4 @@ export const orderSlice = createSlice({
 });
 
 export const { resetOrderModalData } = orderSlice.actions;
+export const orderReducer = orderSlice.reducer;
