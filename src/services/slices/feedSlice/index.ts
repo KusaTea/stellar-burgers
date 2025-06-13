@@ -51,3 +51,5 @@ export const feedSlice = createSlice({
       });
   }
 });
+
+export const feedReducer = feedSlice.reducer;

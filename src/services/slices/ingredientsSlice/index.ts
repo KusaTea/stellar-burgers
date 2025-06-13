@@ -42,3 +42,5 @@ export const ingredientsSlice = createSlice({
       );
   }
 });
+
+export const ingredientsReducer = ingredientsSlice.reducer;

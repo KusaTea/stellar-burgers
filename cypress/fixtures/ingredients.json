@@ -1,0 +1,133 @@
+{
+    "success": true,
+    "data": [
+        {
+            "_id": "11",
+            "name": "black bun",
+            "type": "bun",
+            "proteins": 2,
+            "fat": 1,
+            "carbohydrates": 3,
+            "calories": 120,
+            "price": 12,
+            "image": "https://code.s3.yandex.net/react/code/bun-02.png",
+            "image_mobile": "https://code.s3.yandex.net/react/code/bun-02-mobile.png",
+            "image_large": "https://code.s3.yandex.net/react/code/bun-02-large.png",
+            "__v": 0
+        },
+        {
+            "_id": "12",
+            "name": "standard bun",
+            "type": "bun",
+            "proteins": 1,
+            "fat": 2,
+            "carbohydrates": 3,
+            "calories": 100,
+            "price": 10,
+            "image": "https://code.s3.yandex.net/react/code/bun-02.png",
+            "image_mobile": "https://code.s3.yandex.net/react/code/bun-02-mobile.png",
+            "image_large": "https://code.s3.yandex.net/react/code/bun-02-large.png",
+            "__v": 0
+        },
+        {
+            "_id": "13",
+            "name": "blue bun",
+            "type": "bun",
+            "proteins": 3,
+            "fat": 2,
+            "carbohydrates": 1,
+            "calories": 200,
+            "price": 20,
+            "image": "https://code.s3.yandex.net/react/code/bun-02.png",
+            "image_mobile": "https://code.s3.yandex.net/react/code/bun-02-mobile.png",
+            "image_large": "https://code.s3.yandex.net/react/code/bun-02-large.png",
+            "__v": 0
+        },
+
+        {
+            "_id": "21",
+            "name": "bbq",
+            "type": "sauce",
+            "proteins": 0,
+            "fat": 3,
+            "carbohydrates": 5,
+            "calories": 117,
+            "price": 5,
+            "image": "https://res.cloudinary.com/kraft-heinz-whats-cooking-ca/image/upload/f_auto/q_auto/c_limit,w_3840/f_auto/q_auto/v1/dxp-images/brands/products/00068100078589-chicken--rib-bbq-sauce/marketing-view-color-front_content-hub-10624057_2fe71e9176a4fe916d830bee03a7fbf4?_a=BAVAfVDW0",
+            "image_large": "https://res.cloudinary.com/kraft-heinz-whats-cooking-ca/image/upload/f_auto/q_auto/c_limit,w_3840/f_auto/q_auto/v1/dxp-images/brands/products/00068100078589-chicken--rib-bbq-sauce/marketing-view-color-front_content-hub-10624057_2fe71e9176a4fe916d830bee03a7fbf4?_a=BAVAfVDW0",
+            "image_mobile": "https://res.cloudinary.com/kraft-heinz-whats-cooking-ca/image/upload/f_auto/q_auto/c_limit,w_3840/f_auto/q_auto/v1/dxp-images/brands/products/00068100078589-chicken--rib-bbq-sauce/marketing-view-color-front_content-hub-10624057_2fe71e9176a4fe916d830bee03a7fbf4?_a=BAVAfVDW0",
+            "__v": 0
+        },
+        {
+            "_id": "22",
+            "name": "caesar",
+            "type": "sauce",
+            "proteins": 1,
+            "fat": 4,
+            "carbohydrates": 0,
+            "calories": 132,
+            "price": 3,
+            "image": "https://i5.walmartimages.com/asr/6c36251d-28b6-4fd1-a40c-383b6a01c4c4.9cd41ba1d2a87932777944fd7c88bbac.jpeg",
+            "image_large": "https://i5.walmartimages.com/asr/6c36251d-28b6-4fd1-a40c-383b6a01c4c4.9cd41ba1d2a87932777944fd7c88bbac.jpeg",
+            "image_mobile": "https://i5.walmartimages.com/asr/6c36251d-28b6-4fd1-a40c-383b6a01c4c4.9cd41ba1d2a87932777944fd7c88bbac.jpeg",
+            "__v": 0
+        },
+        {
+            "_id": "23",
+            "name": "mayo",
+            "type": "sauce",
+            "proteins": 0,
+            "fat": 13,
+            "carbohydrates": 10,
+            "calories": 100,
+            "price": 2,
+            "image": "https://i5.walmartimages.com/seo/Kraft-Real-Mayo-Creamy-Smooth-Mayonnaise-15-fl-oz-Jar_530f7430-d0d9-4544-8584-2ba9b7714f36.9c07e4d6e62a15879aff458b7f088cb6.jpeg",
+            "image_large": "https://i5.walmartimages.com/seo/Kraft-Real-Mayo-Creamy-Smooth-Mayonnaise-15-fl-oz-Jar_530f7430-d0d9-4544-8584-2ba9b7714f36.9c07e4d6e62a15879aff458b7f088cb6.jpeg",
+            "image_mobile": "https://i5.walmartimages.com/seo/Kraft-Real-Mayo-Creamy-Smooth-Mayonnaise-15-fl-oz-Jar_530f7430-d0d9-4544-8584-2ba9b7714f36.9c07e4d6e62a15879aff458b7f088cb6.jpeg",
+            "__v": 0
+        },
+
+        {
+            "_id": "31",
+            "name": "beef",
+            "type": "main",
+            "proteins": 20,
+            "fat": 10,
+            "carbohydrates": 5,
+            "calories": 200,
+            "price": 18,
+            "image": "https://voskresnayayarmarka.ru/files/recipes/42.jpg",
+            "image_large": "https://voskresnayayarmarka.ru/files/recipes/42.jpg",
+            "image_mobile": "https://voskresnayayarmarka.ru/files/recipes/42.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "32",
+            "name": "pork",
+            "type": "main",
+            "proteins": 10,
+            "fat": 13,
+            "carbohydrates": 5,
+            "calories": 210,
+            "price": 14,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRAk-3jQSfklFB4liXidA_mzinw4phHECPjg&s",
+            "image_large": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRAk-3jQSfklFB4liXidA_mzinw4phHECPjg&s",
+            "image_mobile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRAk-3jQSfklFB4liXidA_mzinw4phHECPjg&s",
+            "__v": 0
+        },
+        {
+            "_id": "33",
+            "name": "chicken",
+            "type": "main",
+            "proteins": 22,
+            "fat": 5,
+            "carbohydrates": 13,
+            "calories": 185,
+            "price": 11,
+            "image": "https://topfood.club/assets/components/phpthumbof/cache/2024-08-21-nxzaj9-2022-12-01-kqjxuo-chicken-kotlets.2ceee6ffad271e3be1f7409fa7a41c20.jpg",
+            "image_large": "https://topfood.club/assets/components/phpthumbof/cache/2024-08-21-nxzaj9-2022-12-01-kqjxuo-chicken-kotlets.2ceee6ffad271e3be1f7409fa7a41c20.jpg",
+            "image_mobile": "https://topfood.club/assets/components/phpthumbof/cache/2024-08-21-nxzaj9-2022-12-01-kqjxuo-chicken-kotlets.2ceee6ffad271e3be1f7409fa7a41c20.jpg",
+            "__v": 0
+        }
+    ]
+}
