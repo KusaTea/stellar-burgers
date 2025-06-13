@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { getFeeds, feedReducer } from '@slices';
+import { getFeeds, feedReducer } from '@slices/feedSlice';
 
 describe('feed reducer', () => {
     const initialState = {

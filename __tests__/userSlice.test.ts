@@ -6,7 +6,7 @@ import {
   updateUser,
   logoutUser,
   userReducer
-} from '@slices';
+} from '@slices/userSlice';
 
 describe('user reducer', () => {
   const initialState = {

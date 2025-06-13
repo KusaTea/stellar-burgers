@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { getIngredients, ingredientsReducer } from '@slices';
+import { getIngredients, ingredientsReducer } from '@slices/ingredientsSlice';
 
 describe('Тестирование ingredientsReducer', () => {
     const initialState = {

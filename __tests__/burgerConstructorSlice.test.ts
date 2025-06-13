@@ -5,8 +5,9 @@ import {
     moveIngredientUp,
     moveIngredientDown,
     burgerConstructorReducer,
-    TConstructorState
-} from '@slices';
+    TConstructorState,
+    initialState
+} from '@slices/burgerConstructorSlice';
 import { store } from '@store';
 
 function getIngredientsWithoutId(ingredients: Object[]): Object[] {
@@ -20,10 +21,6 @@ function getIngredientsWithoutId(ingredients: Object[]): Object[] {
 };
 
 describe('burger constructor reducer', () => {
-    const initialState: TConstructorState = {
-            bun: null,
-            ingredients: []
-        };
     
     const bunToAdd = {
             _id: "11",

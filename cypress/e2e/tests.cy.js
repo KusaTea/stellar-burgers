@@ -2,7 +2,21 @@ import { getIngredients } from "../api/ingredients";
 import { getUser } from "../api/user";
 import { orderBurger } from "../api/order";
 
-// TODO: прописать атрибуты для элементов
+
+const ingredientBun = '[data-test-ingredient="bun"]:first-of-type';
+const ingredientSauce = '[data-test-ingredient="sauce"]:first-of-type';
+const ingredientMain = '[data-test-ingredient="main"]:first-of-type';
+
+const constructorTopBun = '[data-test-constructor-ingredient="bun (top)"]';
+const constructorSauce = '[data-test-constructor-ingredient="sauce"]';
+const constructorMain = '[data-test-constructor-ingredient="main"]';
+const constructorBottomBun = '[data-test-constructor-ingredient="bun (bottom)"]';
+
+const modalCloseButton = '[data-test-modal="closeButton"]'
+
+const constructorBottom = '[data-test-constructor="bottom"]';
+
+const modal = '#modals';
 
 describe('burger constructor tests', () => {
     beforeEach(() => {
@@ -14,17 +28,17 @@ describe('burger constructor tests', () => {
         // Проверяем, что были добавлены все ингредиенты
         cy.get('[data-test-ingredient]').should('have.length', 9);
         // Добавляем ингридиенты в конструктор
-        cy.get('[data-test-ingredient="bun"]:first-of-type').contains('Добавить').click();
-        cy.get('[data-test-ingredient="sauce"]:first-of-type').contains('Добавить').click();
-        cy.get('[data-test-ingredient="main"]:first-of-type').contains('Добавить').click();
+        cy.get(ingredientBun).contains('Добавить').click();
+        cy.get(ingredientSauce).contains('Добавить').click();
+        cy.get(ingredientMain).contains('Добавить').click();
         
         cy.fixture('ingredients.json').then((ingredients) => {
             // Сравниваем выбранные ингредиенты с имеющимися в конструкторе
             cy.get('[data-test-constructor-ingredient]').should('have.length', 4);
-            cy.get('[data-test-constructor-ingredient="bun (top)"]').invoke('text').should('include', ingredients.data[0].name)
-            cy.get('[data-test-constructor-ingredient="bun (bottom)"]').invoke('text').should('include', ingredients.data[0].name)
-            cy.get('[data-test-constructor-ingredient="sauce"]').invoke('text').should('include', ingredients.data[3].name)
-            cy.get('[data-test-constructor-ingredient="main"]').invoke('text').should('include', ingredients.data[6].name)
+            cy.get(constructorTopBun).invoke('text').should('include', ingredients.data[0].name)
+            cy.get(constructorBottomBun).invoke('text').should('include', ingredients.data[0].name)
+            cy.get(constructorSauce).invoke('text').should('include', ingredients.data[3].name)
+            cy.get(constructorMain).invoke('text').should('include', ingredients.data[6].name)
         });
     });
 });
@@ -33,20 +47,10 @@ describe("modal windows", () => {
     beforeEach(() => {
         getIngredients();
         cy.visit('/');
-        cy.get('#modals').as('modal');
+        cy.get(modal).as('modal');
 
         cy.get('@modal').should('be.empty');
-        cy.get('[data-test-ingredient="bun"]:first-of-type').click();
-        cy.get('@modal').should('not.be.empty');
-    });
-
-    afterEach(() => {
-        getIngredients();
-        cy.visit('/');
-        cy.get('#modals').as('modal');
-
-        cy.get('@modal').should('be.empty');
-        cy.get('[data-test-ingredient="bun"]:first-of-type').click();
+        cy.get(ingredientBun).click();
         cy.get('@modal').should('not.be.empty');
     });
 
@@ -59,7 +63,7 @@ describe("modal windows", () => {
 
     it('close modal window by button', () => {
         // Находим крестик и нажимаем на него
-        cy.get('@modal').find('[data-test-modal="closeButton"]').click();
+        cy.get('@modal').find(modalCloseButton).click();
         // Проверяем, что в модальное окно закрылось и все данные удалились
         cy.get('@modal').should('be.empty');
     })
@@ -96,29 +100,29 @@ describe('order making process', () => {
 
     it('order creation', () => {
         // Проверяем, что кнопка оформления заказа не работает без ингредиентов
-        cy.get('#modals').as('modal')
-        cy.get('[data-test-constructor="bottom"]').find('button').click();
+        cy.get(modal).as('modal');
+        cy.get(constructorBottom).find('button').click();
         cy.get('@modal').should('be.empty');
 
         // Добавляем ингредиенты
-        cy.get('[data-test-ingredient="bun"]:first-of-type').contains('Добавить').click();
-        cy.get('[data-test-ingredient="sauce"]:first-of-type').contains('Добавить').click();
-        cy.get('[data-test-ingredient="main"]:first-of-type').contains('Добавить').click();
+        cy.get(ingredientBun).contains('Добавить').click();
+        cy.get(ingredientSauce).contains('Добавить').click();
+        cy.get(ingredientMain).contains('Добавить').click();
         
         // Проверяем, что заказ оформляется
-        cy.get('[data-test-constructor="bottom"]').find('button').click();
+        cy.get(constructorBottom).find('button').click();
         cy.fixture("order").then((order) => {
             cy.get('@modal').find('h2').invoke('text').should('be.equal', '3701');
         });
 
         // Проверяем закрытие
-        cy.get('@modal').find('[data-test-modal="closeButton"]').click();
+        cy.get('@modal').find(modalCloseButton).click();
         cy.get('@modal').should('be.empty');
 
         // Проверяем очистку конструктора
-        cy.get('[data-test-constructor-ingredient="bun (top)"]').should('not.exist');
-        cy.get('[data-test-constructor-ingredient="sauce"]').should('not.exist');
-        cy.get('[data-test-constructor-ingredient="main"]').should('not.exist');
-        cy.get('[data-test-constructor-ingredient="bun (top)"]').should('not.exist');
+        cy.get(constructorTopBun).should('not.exist');
+        cy.get(constructorSauce).should('not.exist');
+        cy.get(constructorSauce).should('not.exist');
+        cy.get(constructorBottomBun).should('not.exist');
     });
 });

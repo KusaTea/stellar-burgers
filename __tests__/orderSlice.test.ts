@@ -5,7 +5,7 @@ import {
     sendOrder,
     resetOrderModalData,
     orderReducer
-} from '@slices';
+} from '@slices/orderSlice';
 
 
 describe('orders reducer', () => {
