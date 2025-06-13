@@ -5,22 +5,11 @@ import {
   getUser,
   updateUser,
   logoutUser,
-  userReducer
+  userReducer,
+  initialState
 } from '@slices/userSlice';
 
 describe('user reducer', () => {
-  const initialState = {
-    loading: false,
-    authChecked: false,
-    authenticated: false,
-    data: {
-      name: '',
-      email: ''
-    },
-    registerError: null,
-    loginError: null,
-    authError: null
-  }
 
   const mockRegister = {
     email: 'test@email.ru',

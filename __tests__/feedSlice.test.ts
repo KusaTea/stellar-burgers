@@ -1,16 +1,7 @@
 import { describe, test, expect } from '@jest/globals';
-import { getFeeds, feedReducer } from '@slices/feedSlice';
+import { getFeeds, feedReducer, initialState } from '@slices/feedSlice';
 
 describe('feed reducer', () => {
-    const initialState = {
-        data: {
-            orders: [],
-            total: 0,
-            totalToday: 0
-        },
-        error: null,
-        loading: false
-    };
 
     const mockFeeds = {
         success: true,

@@ -8,7 +8,6 @@ import {
     TConstructorState,
     initialState
 } from '@slices/burgerConstructorSlice';
-import { store } from '@store';
 
 function getIngredientsWithoutId(ingredients: Object[]): Object[] {
     const newIngredients: Object[] = [];

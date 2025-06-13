@@ -4,19 +4,12 @@ import {
     getAnOrder,
     sendOrder,
     resetOrderModalData,
-    orderReducer
+    orderReducer,
+  initialState
 } from '@slices/orderSlice';
 
 
 describe('orders reducer', () => {
-    const initialState = {
-        ordersLoading: false,
-        anOrderLoading: false,
-        orderRequest: false,
-        modalData: null,
-        error: null,
-        data: []
-    }
 
     const mockOrders = [
         {
